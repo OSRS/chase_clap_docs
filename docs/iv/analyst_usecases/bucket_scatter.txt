@@ -1,0 +1,9 @@
+- Analyst has the widget open to monitor network traffic
+- Every half hour new logs are dumped and features are computed
+- The buckets are already known/ saved from a global repository
+- The dashboard allows the analyst to select the buckets that contain at least one log from the dumped http logs
+- The analyst notices that one of the buckets that was trained on Troldesh http data has a significant number of http rows appearing clustered in that bucket
+- The analyst sees takes interest in this clustering of http points, he thinks the organization should take a closer look at this activity
+- The analyst selects the all of the points using the interactive selection tool, gives the points a category ('potentially malicious'), and writes a short description describing why
+    he thinks the points are malicious
+- The analyst hits submit, and the data is saved to a database where other analysts (that have more experience) can look at the actual raw http logs and do a deeper analysis

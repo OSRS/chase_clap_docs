@@ -1,0 +1,71 @@
+ssl logs
+
+Fields
+"ts"
+"uid"
+"id.orig_h"
+"id.orig_p"
+"id.resp_h"
+"id.resp_p"
+"version"
+"cipher"
+"curve"
+"server_name"
+"embeds.driftcdn.com"
+"resumed"
+"established"
+"ja3":"b32309a26951912be7dba376398abc3b"
+"ja3s":"f4febc55ea12b31ae17cfb7e614afda8"
+"anon_orig"
+"anon_resp"
+"_lpp_ver"
+"_lpp_plugin"
+
+
+------ server_name
+
+examples:
+	v10.events.data.microsoft.com
+	stats.appsflyer.com
+	valid.apple.com
+	5bOgASDF.virginia.edu
+	teams.microsoft.com
+
+Similiar to (but not the same as) the host field in the http logs.
+Didn't see any ip addresses as the server_name
+
+Possible feature ideas
+- join on the cisco top 1m
+- split on the '.'
+	- count the number of sections
+	- compute the frequency of the subparts ('virginia' would have a higher frequency)
+	- get the tld, compute the frequency of the tld
+	- as many of the made_domain features as possible
+- join on ja3 blacklist
+
+
+------ version
+
+- compute frequencies
+
+------ cipher
+
+- compute frequencies
+
+
+------ validation_status
+
+- binary? (ok/ not ok)
+
+
+------ subject/ issuer fields
+
+- how to use with dns mining
+
+------ resumed field
+True/ False - convert to 1 or 0
+
+
+Labels
+- virustotal on the server_name field?
+- use all fireeye events, scan for source ips attacking internal servers

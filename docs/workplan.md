@@ -1,0 +1,131 @@
+Nebula Deployment / Testing / Prototyping (2)
+- Existing Python (**Deprecated -- NO FURTHER EFFORTS**)
+  - Upload / test Sentinel code on Nebula (JP) (DONE)
+  - Run FeatureCalc on Nebula (JP) (DONE)
+  - Run NN on Nebula (JP) (**Wont Do**)
+  - Run NB on Nebula (JP) (**Wont Do**)
+- C# Codebase
+  - Deploy and run on Nebula (JP) (**Wont Do**)
+
+Sentinel Migration (2)
+- Existing Python (**Deprecated -- NO FURTHER EFFORTS**)
+  - Create Spark / Jupyter VM (JP) (DONE)
+  - Features data migration (JP) (DONE)
+  - Druid vs parquet vs gzip Features Framework updates (JP) (DONE)
+  - Create dotnet capable VM for prototyping (JP) (DONE)
+- C# Codebase
+  - Deploy and run on Sentinel (JP/FB) (TODO)
+
+Stream Processing Prototyping (1)
+- Features Engineering
+  - HTTP
+    - Host (JP) (**Prototype in use**)
+    - DestIP (MC) (**Prototype in use**)
+    - SourceIP (MC) (**Prototype in use**)
+  - SSL
+    - DestIP (JP) (TODO)
+    - SourceIP (JP) (TODO)
+  - CONN
+    - DestIP (MC) (**Prototype in use**)
+    - SourceIP (MC) (**Prototype in use**)
+  - DNS
+    - DestIP (JP) (TODO)
+    - SourceIP (JP) (TODO)
+  - ECAR
+    - (TODO)
+  - FILES
+    - (TODO)
+  - SSH
+    - DestIP (JP) (TODO)
+    - SourceIP (JP) (TODO)
+  - X509
+    - (TODO)
+  - SYSLOG
+    - DestIP (JP) (TODO)
+    - SourceIP (JP) (TODO)
+  - DHCP
+    - DestIP (JP) (TODO)
+    - SourceIP (JP) (TODO)
+  - FTP
+    - DestIP (JP) (TODO)
+    - SourceIP (JP) (TODO)
+  - RADIUS
+    - DestIP (JP) (TODO)
+    - SourceIP (JP) (TODO)
+  - SMTP
+    - DestIP (JP) (TODO)
+    - SourceIP (JP) (TODO)
+  - SIGNATURES
+    - DestIP (JP) (TODO)
+    - SourceIP (JP) (TODO)
+  - SOCKS
+    - DestIP (JP) (TODO)
+    - SourceIP (JP) (TODO)
+  - SOFTWARE
+    - (TODO)
+  - WEIRD
+    - DestIP (JP) (TODO)
+    - SourceIP (JP) (TODO)
+
+- Data Sourcing Processors
+  - Raw log IO Processors prototyping
+    - GZip Reader (MC) (DONE)
+    - Zeek Format Reader (MC) (DONE)
+    - Json Reader (MC) (DONE)
+    - Druid Reader (JP) (**Won't Do**)
+  - Normalizer processors
+    - UVA Format HTTP (MC) (DONE)
+    - UVA Format CONN (MC) (DONE)
+    - UVA Format SSL (JP) (TODO)
+    - UVA Format SSH (JP) (TODO)
+    - Zeek / Optc Format HTTP (MC) (DONE)
+    - Zeek / Optc Format CONN (MC) (DONE)
+    - Druid / Sentinel HTTP (JP) (**Won't Do**)
+    - Druid / Nebula HTTP (JP) (**Won't Do**)
+- Standard CHASE DAG
+  - Routing processor (MC) (DONE)
+  - Stream merging/MUX processor (MC) (DONE)
+- EnrichmentProcessor (test & further dev)
+  - (Protype in use)
+- Community model
+  - Implementation libraries
+    - persistence impl
+    - sample data entities
+- Tagging model
+  - Implementation libraries
+    - persistence impl
+    - sample data entities
+- Type system model (to enable sharing)
+  - types
+  - sharing
+  - stores
+- Rating system model
+  - flat ratings (single value)
+  - score ratings (e.g. badness & goodness "trustworthyness")
+- Sharing integration conops
+  - service endpoint (simple prototype)
+  - share data store
+  - share data fusion sample (histos, scores w/ratings)
+- Analytics impls (from analytics section)
+    
+Analytics Development (1)
+- Neural Net
+  - Type 1 (rev'd from original HTTP)
+    - HTTP
+      - Extension for all features + raw fields
+    - CONN
+    - Evaluate applicability on Log Types
+- Histogram Analytics
+  - Naive Bayes
+    - HTTP
+      - Extension for all features + raw fields
+    - CONN
+    - Evaluate applicability on Log Types
+- Bucketing Analytics
+  - Evaluate applicability on Log Types
+
+UI Prototyping
+- simple web-app for CRUD of community model  (3)
+  - communities / staff / orgs
+  - tag / tag taxonomy management
+  - rating submission
